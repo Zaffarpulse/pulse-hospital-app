@@ -1,0 +1,11 @@
+workflows:
+  web-build:
+    name: Web App Deployment
+    max_build_duration: 10
+    environment:
+      node: 16.14.0
+    scripts:
+      - npm install
+      - npm run build
+    artifacts:
+      - dist/**
